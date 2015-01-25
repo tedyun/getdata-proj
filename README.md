@@ -41,6 +41,9 @@ The __readDataDirectory__ function takes care of the steps 2-4. The main functio
 ## Other Information
 
 Note that the features in the original data set includes some special characters ('-', '(', ')', ',') that are not suitable to be used as column names. Hence, we delete the characters '(' and ')', and convert '-' and ',' converted to '_'. For example,
+
 > fBodyAccJerk-mean()-X
+
 becomes
+
 > fBodyAccJerk_mean_X
