@@ -1,12 +1,14 @@
 library(reshape2)
 
-## this function will return TRUE if the given str contains a substring
+## This is a helper function that returns TRUE if the given str contains a substring
 # ".mean." or ".std.". This function supports vectorized operations
 isMeanOrStd <- function (str) {
     ## need to escape the dot character
     grepl("\\.mean\\.", str) | grepl("\\.std\\.", str)
 }
 
+## This function take a directory name, a feature vector, and an activity labels veector
+## and returns a data frame that contains combined data in the directory.
 readDataDirectory <- function (dir, features, act_labels) {
     ## read test data sets
     
@@ -76,6 +78,9 @@ runAnalysis <- function () {
     
     # summarize data using two ids -- "subject" and "activity" -- and "mean" function
     data_summarized <- dcast(data_melt, subject + activity ~ variable, fun.aggregate = mean)
+    
+    # write "result_final.txt" file
+    write.table(data_summarized, "result_final.txt", row.names = FALSE)
     
     # return summarized data
     data_summarized
