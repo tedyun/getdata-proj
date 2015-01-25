@@ -35,8 +35,8 @@ For the remaining 66 variables, use the following dictionary:
 - 'Mag': magnitude
 
 Units:
-- 't': second
-- 'f': hertz
+- variables starting with 't': second
+- variables starting with 'f': hertz
 
 "tBodyAcc_mean_X"
 
