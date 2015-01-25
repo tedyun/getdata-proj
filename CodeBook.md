@@ -34,6 +34,10 @@ For the remaining 66 variables, use the following dictionary:
 - 'Jerk': Jerk signals
 - 'Mag': magnitude
 
+Units:
+- 't': second
+- 'f': hertz
+
 "tBodyAcc_mean_X"
 
 "tBodyAcc_mean_Y"
