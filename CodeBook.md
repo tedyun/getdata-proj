@@ -14,26 +14,25 @@ These signals were used to estimate variables of the feature vector for each pat
 ## Variables
 
 "subject"
-> The subject (numbers from 1 to 30)
+- The subject (numbers from 1 to 30)
 
 "activity"
-> The activity that the subject conducted (one of the following 6 values)
-> "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING"
+- The activity that the subject conducted: "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", or "LAYING"
 
 For the remaining 66 variables, use the following dictionary:
-> 't': time
-> 'f': frequency domain signals
-> 'mean': mean
-> 'std: standard deviation
-> 'Acc': acceleration
-> 'Gyro': gyroscope 3-axial raw signal
-> 'X': x-axis
-> 'Y': y-axis
-> 'Z': z-axis
-> 'Body': body
-> 'Gravity': gravity
-> 'Jerk': Jerk signals
-> 'Mag': magnitude
+- 't': time
+- 'f': frequency domain signals
+- 'mean': mean
+- 'std: standard deviation
+- 'Acc': acceleration
+- 'Gyro': gyroscope 3-axial raw signal
+- 'X': x-axis
+- 'Y': y-axis
+- 'Z': z-axis
+- 'Body': body
+- 'Gravity': gravity
+- 'Jerk': Jerk signals
+- 'Mag': magnitude
 
 "tBodyAcc_mean_X"
 
