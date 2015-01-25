@@ -20,13 +20,13 @@ source("run_analysis.R"); runAnalysis()
 
 There are three functions in *run_analysis.R*.
 
-- isMeanOrStd: internal function that checks if a string contains characters "mean__" or "std__". Returns TRUE if it does, FALSE otherwise.
-- readDataDirectory: internal function that reads "test" or "train" sub-directory and returns a data frame which has the following property:
+- __isMeanOrStd__: internal function that checks if a string contains characters "mean__" or "std__". Returns TRUE if it does, FALSE otherwise.
+- __readDataDirectory__: internal function that reads "test" or "train" sub-directory and returns a data frame which has the following property:
 -- the data frame only includes columns about the mean or the standard deviation for each measurement
 -- the name of the columns are all descriptive
 -- the first column of the data frame is "subject" which denotes the subjects of the expriment (numbers from 1 to 30)
 -- the second column of the data frame is "activity" which denotes the *descriptive* activity name
-- runAnalysis: the main function. This utilizes the other two internal functions and returns the final tidy dataset and writes it in "result_final.txt" file.
+- __runAnalysis__: the main function. This utilizes the other two internal functions and returns the final tidy dataset and writes it in "result_final.txt" file.
 
 Recall the five steps in the project description:
 
@@ -36,4 +36,11 @@ Recall the five steps in the project description:
 4. Appropriately labels the data set with descriptive variable names. 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-The *readDataDirectory* function takes care of the steps 2-4. The main function *runAnalysis* merges (step 1) the two datasets returned from *readDataDirectory* and reshapes it into the final tidy data set (step 5).
+The __readDataDirectory__ function takes care of the steps 2-4. The main function __runAnalysis__ merges (step 1) the two datasets returned from *readDataDirectory* and reshapes it into the final tidy data set (step 5).
+
+## Other Information
+
+Note that the features in the original data set includes some special characters ('-', '(', ')', ',') that are not suitable to be used as column names. Hence, we delete the characters '(' and ')', and convert '-' and ',' converted to '_'. For example,
+> fBodyAccJerk-mean()-X
+becomes
+> fBodyAccJerk_mean_X
